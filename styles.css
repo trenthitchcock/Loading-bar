@@ -1,0 +1,65 @@
+<title>Progress Bar</title>
+</head>
+<body>
+  <div class="progress-bar" data-label="Loading..."></div>
+  <div class="progress-bar" style="--width: 10" data-label="Loading..."></div>
+</body>
+</html>
+46 Progress Bar/styles.css
+@@ -1,33 +1,33 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.progress-bar {
+  position: relative;
+  width: 500px;
+  height: 3em;
+  background-color: black;
+  border-radius: 2em;
+  color: blue;
+  position: relative;
+  width: 500px;
+  height: 3em;
+  background-color: black;
+  border-radius: 1.5em;
+  color: blue;
+}
+
+.progress-bar::before {
+  content: attr(data-label);
+  display: flex;
+  align-items: center;
+  left: .5rem;
+  top: .5em;
+  bottom: .5em;
+  width: calc(var(--width, 0) * 1%);
+  min-width: 2rem;
+  max-width: calc(100% - 1rem);
+  position: absolute;
+  background-color: cyan;
+  border-radius: 1em;
+  padding-left: 1em;
+}
+  content: attr(data-label);{
+  display : flex;
+  align-items: center;
+  position: absolute;
+  left: 5em;
+  top: 5em;
+  bottom: 5em;
+  width: calc(var(--width, 0) * 1%);
+  min-width: 2rem;
+  max-width: calc(100% - 1em);
+  background-color: #069;
+  border-radius: 1em;
+  padding: 1em;
+}
